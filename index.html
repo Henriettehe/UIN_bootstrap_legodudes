@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legodudes webshop</title>
-    <link href="webshopstyle.css" rel="stylesheet">
-    <link rel="stylesheet" href="sass/main.scss">
-    <link rel="stylesheet" href="css/main.css">
+    <!----Aldri linke sass, den leses ikke <link rel="stylesheet" href="sass/main.scss">-->
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
@@ -34,7 +32,7 @@
             </ul>
             <p>Totalt kr. <span id="total">0</span>,-</p>
         </section>
-            <nav>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <a href="city.html">City</a>
                 <a class="active" href="ninjago.html">Ninjago</a>
                 <a href="castle-nights.html">Castle and knights</a>
@@ -43,28 +41,28 @@
             </nav>
         <main>
             <h2>Ninjago</h2>
-            <article class="product-card">
+            <article class="product-card col-3">
                 <img src="images/PROD_dragon_zane.webp" alt="Produktbilde av Zane" />
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Dragon Zane</h3>
                 <span class="price">Kr. 89,-</span>
                 <button onClick="addToCart('Dragon Zane', 89)">Legg i handlekurv</button>
             </article>
-            <article class="product-card">
+            <article class="product-card col-3">
                 <img src="images/PROD_lil_ninja.webp" alt="Produktbilde av Lil ninja" />
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Lil Ninja</h3>
                 <span class="price">Kr. 89,-</span>
                 <button>Legg i handlekurv</button>
             </article>
-            <article class="product-card">
+            <article class="product-card col-3">
                 <img src="images/PROD_master_wu.webp" alt="Produktbilde av Master Wu" />
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Master Wu</h3>
                 <span class="price">Kr. 109,-</span>
                 <button class="addtocart">Legg i handlekurv</button>
             </article>
-            <article class="product-card">
+            <article class="product-card col-3">
                 <img src="images/PROD_scuba_kai.webp" alt="Produktbilde av Scuba Kai" />
                 <a href="ninjago.html">Ninjago</a>
                 <h3>Scuba Kai</h3>

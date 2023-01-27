@@ -1,4 +1,215 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "../sass/color";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid"; 
+@import "color";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
+
+
+$font-family:'Rubik', sans-serif;
+$maxwidth: 1200px;
+$rootsize: 20px;
+$font-size: $rootsize;
+$background-color: $Legoyellow;
+
+
+body {
+    background-image: url('images/mainbackground.png');
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    div.container {
+
+            width:100%;
+            max-width: $maxwidth;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+    
+        a {
+            width: 100%;
+            max-width: 250px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    #cart {
+        position: relative;
+        width: 100%;
+        max-width: 50px;
+        
+        .label{
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            text-align: center;
+            color: $Legowhite;
+            background-color: $Legored;
+            position: absolute;
+            top: -1.3rem;
+            left: -1.3rem;
+            box-sizing: border-box;
+            padding-top: 4px;
+        }
+    }
+
+    nav {
+        width: 100%;
+        background-color: $Legored;
+        display: flex;
+
+        a {
+            color: $Legowhite;
+            text-decoration: none;
+            padding: .5rem 1rem;
+            border-bottom: 5px solid $Legored;
+            display: inline-block;
+            text-transform: uppercase;
+            transition: ease-in-out .2s;
+
+            &:hover {
+                color: $Legoyellow;
+                border-color: $Legoyellow;
+                }
+
+                .active {
+                    background-color: $Legoyellow;
+                    border-color: $Legoblack;
+                    color: $Legoblack;
+                }
+
+                &:hover {
+                    color: $Legored
+                }
+        }
+        
+    }
+
+    main{ 
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 1rem;
+        justify-content: space-between;
+
+        h2 {
+            width: 100%;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+
+    article.product-card {
+        background: $Legoblack;
+        border-bottom: 1rem solid $Legogreen;
+        width: 31%;
+        overflow: hidden;
+        padding: 1rem; 
+        box-sizing: border-box;
+        color: $Legowhite;
+        margin-bottom: 2rem;
+
+        > * {
+            display: block;
+            clear: both;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            color: $Legoyellow;
+            padding: .5rem 0;
+            text-decoration: none;
+        }
+
+        h3 {
+            margin: .2rem 0 .5rem 0;
+            text-transform: uppercase;
+        }
+
+        button {
+            background: $Legogreen;
+            color: $Legowhite;
+            font-family: 'Rubik', sans-serif;
+            border: none;
+            padding: .5rem 1rem;
+            font-size: 1rem;
+        }
+    }
+
+    #cartview {
+        width: 100%;
+        max-width: 500px;
+        background-color: $Legoblack;
+        color: $Legowhite;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        border-left: .5rem solid $Legogreen;
+        border-bottom: .5rem solid $Legogreen;
+        padding: 1rem;
+        transition: ease-in-out .1s;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border-bottom: 1px solid $Legogreen;
+            padding-bottom: .5rem;
+            margin-bottom: .5rem;
+            display: block;
+            clear: both;
+            transition: ease-in-out .7s;
+        }
+
+        > * {
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+        span.title {
+            width: calc(100% - 9rem);
+        }
+
+        span.price, span.quantity {
+            width: 3rem;
+        }
+
+        button.delete {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: var(--red);
+            color: var(--white);
+        }
+
+        .hidden {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}
+
 
